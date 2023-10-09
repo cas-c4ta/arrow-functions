@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="shortcut icon" href="#">
+  <title>Arrow Functions</title>
+  <style>
+    .code-section {
+      background: antiquewhite;
+      color: darkslateblue;
+    }
+    .comment { color: cadetblue; }
+
+    p code, li code {
+      background: light;
+      padding: 0 4px;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Arrow Functions</h1>
+  <p>«Arrow Functions sind eine verkürzte Schreibweise für Funktionen. ‘Arrow’ bezieht sich auf die Pfeilähnliche Form:
+    <code>=&gt;</code>
+  </p>
+
+  <h2>Herkömmliche Schreibweise</h2>
+  <section class="code-section">
+    <pre><code>
+    function sum(a, b) { return a + b }
+    sum(2, 3) <span class="comment">// 5</span>
+    sum(8, 4) <span class="comment">// 12</span>
+  </code></pre>
+  </section>
+
+  <h2>Verkürzte Schreibweise</h2>
+  <section class="code-section">
+    <pre><code>
+    const sum = (a, b) => a + b
+    sum(2, 3) <span class="comment">// 5</span>
+    sum(8, 4) <span class="comment">// 12</span>
+  </code></pre>
+  </section>
+
+  <ul>
+    <li>Bei nur einer Zeile können die geschweiften Klammern <code>{}</code> weggelassen werden.</li>
+    <li>Bei nur einer Zeile kann das <code>return</code> Statement weggelassen werden.</li>
+    <li>Gibt es nur ein Argument, kann auch die runde Klammer <code>()</code> weggelassen werden.</li>
+  </ul>
+
+  <h2>Anwendung</h2>
+  <ul>
+    <li>Nützlich ist dies, wenn Funktionen als Einschub in einer Zeile benötigt werden, die dann sehr lange wird.</li>
+    <li>Bsp. 1) Funktionen mit Callback</li>
+    <li>Bsp. 2) Array-Methoden wie <em>forEach</em> oder <em>map</em></li>
+  </ul>
+
+  <section class="code-section">
+  <pre><code>
+    const myArr = [
+      { x: 10, y: 24 },
+      { x: 72, y: 12 },
+      { x: 39, y: 74 },
+      { x: 41, y: 33 }
+    ]
+
+    myArr.forEach(pos => console.log(pos.x))
+  </code></pre>
+  </section>
+  <p>In diesem Beispiel </p>
+
+  <script src="main.js"></script>
+</body>
+
+</html>
